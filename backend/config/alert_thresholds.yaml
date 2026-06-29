@@ -1,0 +1,19 @@
+# Alerting config (Day 8)
+#
+# Severity (Green/Yellow/Red) is already computed for every feature by
+# src/drift/severity.py before this file is ever consulted. This file
+# only controls notification behavior: which channels fire for a given
+# severity, and how long to suppress repeat alerts for the same feature.
+
+yellow:
+  channels: [slack]
+  cooldown_minutes: 30
+
+red:
+  channels: [slack, email]
+  cooldown_minutes: 30
+
+# If true, a feature whose severity escalates (e.g. Yellow -> Red) is
+# always alerted on, even if still inside the previous alert's cooldown
+# window. If false, escalations are suppressed the same as repeats.
+allow_escalation_during_cooldown: true
