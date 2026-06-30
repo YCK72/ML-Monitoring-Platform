@@ -64,3 +64,10 @@ export interface ModelVersion {
   mlflow_run_id: string | null;
   created_at: string;
 }
+
+export interface PaginatedAlerts {
+  items: AlertEvent[];
+  total: number;
+  page: number;
+  page_size: number;
+}
