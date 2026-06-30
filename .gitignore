@@ -1,16 +1,57 @@
-# Environment variables
+﻿# Environment variables
 .env
+.env.local
 
 # Python virtual environments
 .venv/
+venv/
 
 # Python cache
 __pycache__/
 *.pyc
+*.pyo
+.coverage
+htmlcov/
 
 # IDE files
 .vscode/
 .idea/
+*.iml
 
-# Docker volumes (optional)
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes
 postgres_data/
+
+# Generated outputs
+backend/reports/
+backend/data/
+
+# Test batch files
+backend/heavy_drift_batch.json
+backend/heavy_drift_batch3.json
+backend/heavy_drift_batch4.json
+backend/heavy_drift_batch5.json
+backend/mild_drift_batch.json
+backend/normal_batch.json
+backend/normal_check.json
+
+# Alembic runtime
+backend/alembic.ini
+backend/alembic/
+
+# Coverage
+backend/.coverage
+coverage.xml
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# MLflow
+mlruns/
+mlartifacts/
